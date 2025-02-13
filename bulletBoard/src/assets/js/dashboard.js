@@ -21,7 +21,7 @@ $(function () {
     },
 
 
-    colors: ["#5D87FF", "#49BEFF"],
+    colors: ["#20c997", "#13DEB9"],
 
 
     plotOptions: {

@@ -67,7 +67,6 @@ function paintToDo(newTodo){
 
 function handleToDoSubmit (event){
   event.preventDefault();
-  console.log("되나");
   const newTodo = toDoInput.value;
   toDoInput.value = "";
   const newTodoObj = {

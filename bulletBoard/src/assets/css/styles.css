@@ -652,6 +652,7 @@ progress {
   display: none !important
 }
 
+
 .lead {
   font-size: 1.09375rem;
   font-weight: 300
@@ -20453,4 +20454,9 @@ ul {
   border: 2px solid #13DEB9
 }
 
-.font_test3 { text-decoration:line-through }
+
+
+.lin-cen{
+  margin-top: 20px;
+  align-items: center;
+}
