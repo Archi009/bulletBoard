@@ -6,7 +6,7 @@ const boardText = document.querySelector("textarea#board")
 const btnSubmit = document.querySelector("button#submit")
 const btnAlter = document.querySelector("button#alter")
 const btnCheck = document.querySelector("button#check")
-const HIDDEN_CLASSNAME = "d-none"
+const HIDDEN_CLASSNAME = "d-none"//display-none
 const BOARD = "board"
 const ITEM = "item"
 const savedBoard = localStorage.getItem(BOARD) //저장돼있는 게시판 목록
@@ -16,15 +16,16 @@ btnAlter.classList.toggle(HIDDEN_CLASSNAME)
 btnCheck.classList.toggle(HIDDEN_CLASSNAME)
 let detail = new Object()
 let boardDetail = [];
+let needNo = null
 console.log(getBoard);
 
 if(savedBoard != null){                      //새로고침으로 없어지기 전에 저장
   parsedBoard = JSON.parse(savedBoard)
   boardDetail = parsedBoard
 }
-console.log(boardDetail);
+// console.log(boardDetail);
 if(getBoard != null){                       //상세 조회로 넘어왔을때
-  const needNo = JSON.parse(getBoard)
+  needNo = JSON.parse(getBoard)
   
   parsedBoard =JSON.parse(savedBoard)
  
@@ -40,13 +41,14 @@ if(getBoard != null){                       //상세 조회로 넘어왔을때
   btnSubmit.classList.toggle(HIDDEN_CLASSNAME)
   
 }
-
+console.log(needNo);
 function saveBoard () {
   console.log(boardText.value);
   let test = boardText.value
   let test2 = boardTitle.value
   if(!test||!test2)   {
-    console.log("teset");
+    alert("제목과 내용을 입력하세요")
+    boardTitle.focus()
     return;
   }
   // if(!test2){ 
@@ -59,7 +61,7 @@ function saveBoard () {
   
   boardDetail.push(detail)
   localStorage.setItem(BOARD,JSON.stringify(boardDetail))
-  
+  location.href = "boardList.html"
 }
 
 function alterBoard(){
@@ -67,23 +69,27 @@ function alterBoard(){
  btnCheck.classList.toggle(HIDDEN_CLASSNAME)
  boardTitle.removeAttribute("readonly")
  boardText.removeAttribute("readonly")
- 
+ console.log(parsedBoard);
 }
 
 function alterConfirm(){
   let test = boardText.value
   let test2 = boardTitle.value
   if(!test||!test2)   {
-    console.log("teset");
+    alert("제목과 내용을 입력하세요")
+    boardTitle.focus()
     return;
   }
-  // if(!test2){ 
-  //    return
-  // }
+  parsedBoard =JSON.parse(savedBoard)
   detail.title = boardTitle.value
   detail.text = boardText.value
   detail.name = JSON.parse(localStorage.getItem("nowUser")).name
   detail.time = Date.now()
+  parsedBoard = parsedBoard.filter((item)=>item.time != needNo)
+  parsedBoard.push(detail)
+  localStorage.setItem(BOARD,JSON.stringify(parsedBoard))
+  localStorage.removeItem("item")
+  location.href ="boardList.html"
 
 }
 
@@ -93,7 +99,7 @@ function block(e){
 
 
 
-boardForm.addEventListener("submit",block)
-btnSubmit.addEventListener("click",saveBoard)
-btnAlter.addEventListener("click",alterBoard)
-btnCheck.addEventListener("click",alterConfirm)
+boardForm.addEventListener("submit",block)  //페이지 자동 이동막기
+btnSubmit.addEventListener("click",saveBoard) //게시물 저장
+btnAlter.addEventListener("click",alterBoard) //게시물 수정 활성화
+btnCheck.addEventListener("click",alterConfirm) //수정

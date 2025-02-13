@@ -21,6 +21,7 @@ if (savedList != null) {
 
     td2.innerText = boardlist[i].title
     td2.addEventListener("click", goDetail)
+    td2.setAttribute("class","cursor-pointer")
     tr.appendChild(td2)
     
     
