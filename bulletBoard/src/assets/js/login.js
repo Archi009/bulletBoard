@@ -15,6 +15,14 @@ let user =[]
 const USERS = "user"
 let data = JSON.parse(localStorage.getItem(USERS))
 console.log(data);
+if(data==null){
+  data = []
+  data.push(admin)
+  console.log(data);
+  localStorage.setItem(USERS,JSON.stringify(data))
+  console.log(JSON.stringify(data));
+  data = JSON.parse(localStorage.getItem(USERS))
+}
 
 // if(data != null ){ // 로컬스토리지에 관리자 있으면 추가 안함
 //   let count = 0
@@ -46,22 +54,22 @@ console.log(data);
 //   console.log(user);
 // }
 
-localStorage.setItem(USERS,JSON.stringify(data)) // 리셋 방지용으로 기존 데이터 받아와서 로컬에 저장
-console.log(user);
+// localStorage.setItem(USERS,JSON.stringify(data)) // 리셋 방지용으로 기존 데이터 받아와서 로컬에 저장
+
 let userAct = new Object();
 
 function loginHandler(e){
   e.preventDefault();
 
-  console.log(user);
+  
   for(let i =0; i<data.length;i++){
-    console.log(data[i].id);
-    console.log(data[i].pw);
-    console.log(inputId.value.trim());
+    console.log(inputId.value);
     if(inputId.value.trim() == data[i].id&&inputPw.value.trim() == data[i].pw){
-      userAct = user[i]
+      console.log(data[i].id)
+      userAct = data[i]
+      
       localStorage.setItem("nowUser",JSON.stringify(userAct))
-      console.log("로그인");
+      // console.log("로그인");
       location.href= "bullet.html"
       return
     }
