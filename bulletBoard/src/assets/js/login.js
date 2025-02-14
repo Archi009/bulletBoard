@@ -1,7 +1,7 @@
 //login 
 
 let admin = {
-  name: "admin",
+  name: "김어진",
   id: "admin@naver.com",
   pw: "qwer1234",
   auth: 0
