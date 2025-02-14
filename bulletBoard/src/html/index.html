@@ -4,365 +4,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bullet Board</title>
+  <title>Modernize Free</title>
   <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
   <link rel="stylesheet" href="../assets/css/styles.min.css" />
-  <link rel="stylesheet" href="../assets/css/weather.css" />
-  <link rel="stylesheet" href="../assets/css/cloudAnimation.css">
-  <link rel="stylesheet" href="../assets/css/clock.css">
 </head>
 
 <body>
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
-    <!-- Sidebar Start -->
-    <aside class="left-sidebar">
-      <!-- Sidebar scroll-->
-      <div>
-        <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
-            <img src="../assets/images/logos/Remove.svg" width="180" alt="" />
-          </a>
-          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
-            <i class="ti ti-x fs-8"></i>
-          </div>
-        </div>
-        <!-- Sidebar navigation-->
-        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
-          <ul id="sidebarnav">
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">UI COMPONENTS</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-buttons.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-article"></i>
-                </span>
-                <span class="hide-menu">Buttons</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./board.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-article"></i>
-                </span>
-                <span class="hide-menu">Board</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./boardList.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                <span class="hide-menu">Board List</span>
-              </a>
-            </li>
-            
-            
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">AUTH</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-login"></i>
-                </span>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user-plus"></i>
-                </span>
-                <span class="hide-menu">Register</span>
-              </a>
-            </li>
-         
-            
-            
-          </ul>
-
-        </nav>
-        <!-- End Sidebar navigation -->
-      </div>
-      <!-- End Sidebar scroll-->
-    </aside>
-    <!--  Sidebar End -->
-    <!--  Main wrapper -->
-    <div class="body-wrapper">
-      <!--  Header Start -->
-      <header class="app-header">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <ul class="navbar-nav">
-            <li class="nav-item d-block d-xl-none">
-              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
-                <i class="ti ti-menu-2"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
-                <i class="ti ti-bell-ringing"></i>
-                <div class="notification bg-success rounded-circle"></div>
-              </a>
-            </li>
-          </ul>
-          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
-            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <li class="nav-item dropdown">
-                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
-                </a>
-                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
-                  <div class="message-body">
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-user fs-6"></i>
-                      <p class="mb-0 fs-3">My Profile</p>
-                    </a>
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-mail fs-6"></i>
-                      <p class="mb-0 fs-3">My Account</p>
-                    </a>
-                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                      <i class="ti ti-list-check fs-6"></i>
-                      <p class="mb-0 fs-3">My Task</p>
-                    </a>
-                    <a class="btn btn-outline-success mx-3 mt-2 d-block">Logout</a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <!--  Header End -->
-      <div class="container-fluid">
-        <!--  Row 1 -->
-        <div class="row">
-          <div class="col-lg-8 d-flex align-items-strech">
-            <div class="card w-100">
+    <div
+      class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center justify-content-center w-100">
+        <div class="row justify-content-center w-100">
+          <div class="col-md-8 col-lg-6 col-xxl-3">
+            <div class="card mb-0">
               <div class="card-body">
-                <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
-                  <div class="mb-3 mb-sm-0">
-                    <h5 class="card-title fw-semibold">달성률</h5>
+                <a href="" class="text-nowrap logo-img text-center d-block py-3 w-100" >
+                  <img src="../assets/images/logos/Remove.svg" width="180" alt="">
+                </a>
+                <p class="text-center">Personal Bullet Board</p>
+                <form id="formLogin">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail" class="form-label">Username</label>
+                    <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
                   </div>
-
-                </div>
-                <div id="chart"></div>
-                <div class="col-lg d-flex align-items-stretch">
-                  <div class="card w-100">
-                    <div class="card-body p-4">
-                      <!--todo 리스트-->
-                      <h5 class="card-title fw-semibold mb-4">Recent Transactions</h5>
-                      <form id="todo-form">
-                        <label for="toDo" class="form-label">To do!</label>
-                        <input id="toDo" type="text" class="form-control" placeholder="Write a To Do and Press Enter"
-                          required>
-                      </form>
-                      <div class="table-responsive">
-                        <table class="table text-nowrap mb-0 align-middle">
-                          <thead class="text-dark fs-4">
-                            <tr>
-                              <th class="border-bottom-0">
-                                <input type="checkbox" id="headCheck">
-                              </th>
-                              <th class="border-bottom-0">
-                                <h6 class="fw-semibold mb-0">TO DO</h6>
-                              </th>
-
-                              <!-- <th class="border-bottom-0">
-                                <h6 class="fw-semibold mb-0">Priority</h6>
-                              </th> -->
-
-                            </tr>
-                          </thead>
-                          <tbody id="todoList">
-
-
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                    <!--end of todo리스트-->
+                  <div class="mb-4">
+                    <label for="exampleInputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword">
                   </div>
-                </div>
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                    <!-- <div class="form-check">
+                      <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
+                      <label class="form-check-label text-dark" for="flexCheckChecked">
+                       
+                      </label>
+                    </div> -->
+                    <a class="text-primary fw-bold" href="">Forgot Password ?</a>
+                  </div>
+                  <button class="btn btn-success w-100 py-8 fs-4 mb-4 rounded-2">Sign In</button>
+                  <div class="d-flex align-items-center justify-content-center">
+                    <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an account</a>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="row">
-              <div class="col-lg-12">
-                <!-- Yearly Breakup -->
-                <div class="card overflow-hidden">
-                  <div class="card-body p-4">
-                    <div hidden>
-                      <h5 class="card-title mb-9 fw-semibold">Yearly Breakup</h5>
-                      <div class="row align-items-center">
-                        <div class="col-8">
-                          <h4 class="fw-semibold mb-3">$36,358</h4>
-                          <div class="d-flex align-items-center mb-3">
-                            <span
-                              class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
-                              <i class="ti ti-arrow-up-left text-success"></i>
-                            </span>
-                            <p class="text-dark me-1 fs-3 mb-0">+9%</p>
-                            <p class="fs-3 mb-0">last year</p>
-                          </div>
-                          <div class="d-flex align-items-center">
-                            <div class="me-4">
-                              <span class="round-8 bg-primary rounded-circle me-2 d-inline-block"></span>
-                              <span class="fs-2">2023</span>
-                            </div>
-                            <div>
-                              <span class="round-8 bg-light-primary rounded-circle me-2 d-inline-block"></span>
-                              <span class="fs-2">2023</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-4">
-                          <div class="d-flex justify-content-center">
-                            <div id="breakup"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--card weather-->
-                    <div class="card-weather">
-                      <div class="error">
-                        <p>Invalid city or country name</p>
-                      </div>
-                      <div class="weather">
-                        <img src="../assets/images/weather/rain.png" class="weather-icon" />
-                        <h1 class="temp">30°c</h1>
-                        <h2 class="city">Warsaw</h2>
-                        <div class="details">
-                          <div class="col-weather">
-                            <img src="../assets/images/weather/humidity.png" />
-                            <div>
-                              <p class="humidity">10%</p>
-                              <p>Humidity</p>
-                            </div>
-                          </div>
-                          <div class="col-weather">
-                            <img src="../assets/images/weather/wind.png" />
-                            <div>
-                              <p class="wind">7 km/h</p>
-                              <p>Wind Speed</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--end card weather-->
-                    <div class="container-w">
-                      <div id="cloud">
-                        <span class="shadow"></span>
-                        <div class="rain">
-                          <div class="drop d1"></div>
-                          <div class="drop d2"></div>
-                          <div class="drop d3"></div>
-                          <div class="drop d4"></div>
-                          <div class="drop d5"></div>
-                          <div class="drop d6"></div>
-                          <div class="drop d7"></div>
-                          <div class="drop d8"></div>
-                          <div class="drop d9"></div>
-                          <div class="drop d10"></div>
-                          <div class="drop d11"></div>
-                          <div class="drop d12"></div>
-                          <div class="drop d13"></div>
-                          <div class="drop d14"></div>
-                          <div class="drop d15"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <!-- Monthly Earnings -->
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row alig n-items-start" hidden>
-                      <div class="col-8">
-                        <h5 class="card-title mb-9 fw-semibold"> Monthly Earnings </h5>
-                        <h4 class="fw-semibold mb-3">$6,820</h4>
-                        <div class="d-flex align-items-center pb-1">
-                          <span
-                            class="me-2 rounded-circle bg-light-danger round-20 d-flex align-items-center justify-content-center">
-                            <i class="ti ti-arrow-down-right text-danger"></i>
-                          </span>
-                          <p class="text-dark me-1 fs-3 mb-0">+9%</p>
-                          <p class="fs-3 mb-0">last year</p>
-                        </div>
-                      </div>
-                      <div class="col-4">
-                        <div class="d-flex justify-content-end">
-                          <div
-                            class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
-                            <i class="ti ti-currency-dollar fs-6"></i>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--hidden 종료-->
-                    <div class="card-clock ">
-                      <p id="clock" class="time-text"><span>11:11</span><span class="time-sub-text">PM</span></p>
-                      <p class="day-text">Wednesday, June 15th</p>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"
-                        stroke-width="0" fill="currentColor" stroke="currentColor" class="moon">
-                        <path
-                          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
-                        </path>
-                        <path
-                          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
-                        </path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div id="earning" hidden></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="py-6 px-6 text-center">
-          <p class="mb-0 fs-4">Design and Developed by <a href="https://adminmart.com/" target="_blank"
-              class="pe-1 text-primary text-decoration-underline">AdminMart.com</a> Distributed by <a
-              href="https://themewagon.com">ThemeWagon</a></p>
         </div>
       </div>
     </div>
   </div>
-  <script src="../assets/js/weather.js"></script>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/sidebarmenu.js"></script>
-  <script src="../assets/js/app.min.js"></script>
-  <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
-  <script src="../assets/js/dashboard.js"></script>
-  <script src="../assets/js/todoList.js"></script>
-  <script src="../assets/js/clock.js"></script>
-  <script src="../assets/js/logOut.js"></script>
+  <script src="../assets/js/login.js"></script>
 </body>
 
 </html>

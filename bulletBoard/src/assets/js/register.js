@@ -39,7 +39,7 @@ function submitRegisterFrom(e) {
     userAct.auth = 1;
     account.push(userAct);
     localStorage.setItem(USERS, JSON.stringify(account));
-    location.href = "authentication-login.html"
+    location.href = "index.html"
   } else { //저장된 계정이 없다면
     console.log("else");
     userAct.name = inputNm.value.trim()
@@ -48,7 +48,7 @@ function submitRegisterFrom(e) {
     userAct.auth = 1;
     account.push(userAct);
     localStorage.setItem(USERS, JSON.stringify(account));
-    location.href = "authentication-login.html"
+    location.href = "index.html"
   }
 
 
