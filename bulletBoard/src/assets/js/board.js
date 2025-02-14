@@ -58,6 +58,7 @@ function saveBoard () {
   detail.text = boardText.value
   detail.name = JSON.parse(localStorage.getItem("nowUser")).name
   detail.time = Date.now()
+  detail.check = 0
   
   boardDetail.push(detail)
   localStorage.setItem(BOARD,JSON.stringify(boardDetail))
@@ -87,8 +88,8 @@ function alterConfirm(){
   detail.time = Date.now()
   parsedBoard = parsedBoard.filter((item)=>item.time != needNo)
   parsedBoard.push(detail)
-  localStorage.setItem(BOARD,JSON.stringify(parsedBoard))
   localStorage.removeItem("item")
+  localStorage.setItem(BOARD,JSON.stringify(parsedBoard))
   location.href ="boardList.html"
 
 }

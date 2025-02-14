@@ -6,7 +6,7 @@ $(function () {
   // =====================================
   var chart = {
     series: [
-      { name: "Earnings this month:", data: [355, 255, 300, 350, 390, 180, 355, 390] },
+      { name: "Earnings this month:", data: [3, 4, 5, 6, 7, 8, 1, 2] },
      
     ],
 
@@ -54,7 +54,7 @@ $(function () {
         },
       },
     },
-
+    
     xaxis: {
       type: "category",
       categories: ["16/08", "17/08", "18/08", "19/08", "20/08", "21/08", "22/08", "23/08"],
@@ -67,7 +67,7 @@ $(function () {
     yaxis: {
       show: true,
       min: 0,
-      max: 400,
+      max: 10,
       tickAmount: 4,
       labels: {
         style: {

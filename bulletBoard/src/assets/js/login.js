@@ -16,18 +16,30 @@ const USERS = "user"
 let data = JSON.parse(localStorage.getItem(USERS))
 console.log(data);
 if(data != null){ // 로컬스토리지에 관리자 있으면 추가 안함
+  let count = 0
   for(let i=0; i<data.length; i++){
-    if(data[i].id != admin.id ){
+    
+    if(data[i].id != admin.id ){ //로컬스토리지에 관리자계정이 없다면
+      console.log(data);
+      console.log(count);
       continue;
     }else{
-      user.push(admin);
-    }
+      count++
+    }  
+
+  }
+  if(count == 0){
+    console.log(data);
+    user = data;
+    user.push(admin);
+    console.log(user);
   }
   
 }else{
   data = []
   data.push(admin)
   user =data
+  console.log(user);
 }
 localStorage.setItem(USERS,JSON.stringify(data)) // 리셋 방지용으로 기존 데이터 받아와서 로컬에 저장
 console.log(user);
